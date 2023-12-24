@@ -7,11 +7,18 @@
 h1, p {
     margin: 0;
 }
+input{
+    border: none;
+}
 
 body{
     font-family: Arial, sans-serif;
-    background-image: url("../../public/img/img2.jpg");
+    background-image: url("../../public/img/img5.jpg");
     background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 100vh;
+    box-sizing: border-box;
 }
 
 /*header section*/
@@ -43,8 +50,6 @@ body{
     font-size: 1rem;
 }
 
-
-
 /*task input*/
 .div-add-task{
     position: fixed;
@@ -52,6 +57,7 @@ body{
     left: 50%;
     transform: translateX(-50%);
     width: 100vw;
+    padding-bottom: 20px;
 }
 
 .add-task-input{
@@ -63,4 +69,6 @@ body{
     font-size: 1.3rem;
     border-radius: 5px;
     margin: 10px auto;
+    background-color: #444444;
+    color: white;
 }
