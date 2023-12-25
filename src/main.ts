@@ -6,8 +6,8 @@ import {TaskList} from "./class/TaskList.ts";
 
 //refrencing the html elements in an variable
 const addTask = document.getElementById("task-input") as HTMLInputElement;
-const searchTask = document.getElementById("search-task") as HTMLInputElement;
-const taskListElement = document.getElementById("task-list") as HTMLInputElement;
+const searchInput = document.getElementById("search-task") as HTMLInputElement;
+const taskListElement = document.getElementById("task-incompleted") as HTMLInputElement;
 
 //creating the instance of TaskList Class
 const taskList = new TaskList();
@@ -68,23 +68,14 @@ function renderTaskList(tasks: TaskList){
     })
 }
 
-createTask('Learn JavaScript');
-createTask('Read a book');
-createTask('Exercise');
-
-renderTaskList(taskList);
-
-
-
-//export const addTask = document.getElementById("task-input") as HTMLInputElement;
-//const taskArray:string[] = [];
-//addTask.addEventListener("keydown", (ev)=>{
-//    if(ev.key === "Enter"){
-//        const newTask = addTask.value.trim();
-//        if(newTask !== ""){
-//            taskArray.push(newTask);
-//            console.log(taskArray);
-//        }
-//    }
-//});
-
+//adding event listener to the addTask input
+addTask.addEventListener("keydown", (ev)=>{
+    if(ev.key === "Enter"){
+        const newTaskName = addTask.value.trim();
+        if(newTaskName !== ""){
+            createTask(newTaskName);
+            renderTaskList(taskList);
+            addTask.value = "";
+        }
+    }
+});
