@@ -117,6 +117,7 @@ body{
     padding: 2px 5px;
     background-color: #739072;
     border-radius: 2px;
+    color: #FFFFFF;
 }
 
 .delete-btn:hover{
