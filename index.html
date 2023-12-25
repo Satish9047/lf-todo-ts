@@ -11,7 +11,7 @@
   <header class="header-section">
       <div class="header-div-day">
           <h1>MY DAY</h1>
-          <p>Friday 22, 2023</p>
+          <p id="today-date"></p>
       </div>
       <div class="header-div-search">
           <label for="search-task"></label><input id="search-task" class="search-text" placeholder="Search">
@@ -21,9 +21,9 @@
   
   <main id="app" class="task-section">
     <div class="task-list">
-        <label>Todo Tasks</label>
+        <div class="task-status">Todo Tasks</div>
         <ul class="task-incompleted" id="task-incompleted"></ul>
-        <label>Completed</label>
+        <div class="task-status">Completed</div>
         <ul class="task-completed" id="task-completed"></ul>
     </div>
   </main>

@@ -5,7 +5,7 @@ export interface ITaskList {
     addTask: (task: Task)=> Task[];
     getTaskById: (id: string)=> Task | null;
     getTaskByIndex: (index: number)=> Task | null;
-//    deleteTask: ()
+    deleteTask: (id: string)=>void
 }
 export class TaskList implements ITaskList {
     list: Task[];
@@ -24,5 +24,12 @@ export class TaskList implements ITaskList {
     
     getTaskByIndex = (index: number)=>{
         return this.list[index] || null;
+    }
+
+    deleteTask = (id: string)=>{
+        const taskIndex = this.list.findIndex((task) => task.id === id);
+        if (taskIndex !== -1) {
+            this.list.splice(taskIndex, 1);
+        }
     }
 }

@@ -23,6 +23,7 @@ export class Task implements ITask {
         this.id = getRandomID();
         this.taskName = taskName;
         this.isCompleted = isCompleted;
+        this.completeAudio = new Audio("./public/audio.done.mp3")
     }
     
     setTask = (taskName: string)=>{

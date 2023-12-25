@@ -84,10 +84,10 @@ body{
     align-items: center;
     margin: 20px auto;
     width: 75vw;
-
 }
 
 .task-item{
+    position: relative;
     display: flex;
     margin: 10px 0;
     padding: 10px;
@@ -102,9 +102,35 @@ body{
     width: 75vw;
     height: 75vh;
     overflow: scroll;
+
 }
 
 .item-content{
     display: flex;
     gap: 10px;
+}
+
+.delete-btn{
+    position: absolute;
+    border: none;
+    right: 10px;
+    padding: 2px 5px;
+    background-color: #739072;
+    border-radius: 2px;
+}
+
+.delete-btn:hover{
+    background-color: #7D0A0A;
+}
+.delete-btn:active{
+    background-color: #BF3131;
+}
+
+.task-status{
+    background-color: #444444;
+    margin: 10px 6px;
+    padding: 4px 6px;
+    border-radius: 3px;
+    display: inline-block;
+    color: #FFFFFF;
 }

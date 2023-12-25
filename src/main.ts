@@ -3,6 +3,7 @@
 //importing classes
 import {Task} from "./class/Task.ts";
 import {TaskList} from "./class/TaskList.ts";
+import {getDayDate} from "./utils/day.ts";
 
 //refrencing the html elements in an variable
 const addTask = document.getElementById("task-input") as HTMLInputElement;
@@ -13,6 +14,8 @@ const completedTaskListElement = document.getElementById("task-completed") as HT
 //creating the instance of TaskList Class
 const taskList = new TaskList();
 
+//calling the date
+getDayDate();
 
 //function for creating task
 function createTask (taskName: string):Task{
@@ -67,11 +70,22 @@ function renderTaskList(tasks: TaskList){
             //console.log(task.isCompleted);
         })
 
+        // creating a delete button
+        const deleteButton = document.createElement("button");
+        deleteButton.classList.add("delete-btn")
+        deleteButton.innerText = "Delete";
+        deleteButton.addEventListener("click", () => {
+            taskList.deleteTask(task.id);
+            renderTaskList(taskList);
+        });
+
+
         // Creating a label for the checkbox
         const label = document.createElement("label");
         label.classList.add("item-content");
         label.appendChild(checkBox);
         label.appendChild(document.createTextNode(task.taskName));
+        label.appendChild(deleteButton);
 
         if(!task.isCompleted){
             element.appendChild(label);
@@ -107,4 +121,6 @@ function render(searchParam: string = ""){
     const filterTaskList = searchTaskItem(taskList, searchParam);
     renderTaskList(filterTaskList);
 }
+
+
 
