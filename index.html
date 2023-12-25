@@ -15,13 +15,18 @@
           <p>Friday 22, 2023</p>
       </div>
       <div class="header-div-search">
-          <label for="search-text"></label><input id="search-text" class="search-text" placeholder="Search">
+          <label for="search-task"></label><input id="search-task" class="search-text" placeholder="Search">
           <figure class="header-fig-icon"><img src="./public/icon/search-icon.svg" alt="search"></figure>
       </div>
   </header>
   
-  <main id="app">
-  
+  <main id="app" class="task-section">
+    <div class="task-list">
+        <label>Todo Tasks</label>
+        <ul class="task-incompleted" id="task-incompleted"></ul>
+        <label>Completed</label>
+        <ul class="task-completed" id="task-completed"></ul>
+    </div>
   </main>
 
   <div class="div-add-task">

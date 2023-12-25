@@ -5,8 +5,9 @@ export interface ITaskList {
     addTask: (task: Task)=> Task[];
     getTaskById: (id: string)=> Task | null;
     getTaskByIndex: (index: number)=> Task | null;
+//    deleteTask: ()
 }
-export class ClassList implements ITaskList {
+export class TaskList implements ITaskList {
     list: Task[];
     constructor(tasks?: Task[]) {
         this.list = tasks || [];
@@ -14,7 +15,7 @@ export class ClassList implements ITaskList {
     
     addTask = (task: Task)=>{
         this.list.push(task);
-        return this.list
+        return this.list;
     }
     
     getTaskById = (id: string)=>{
@@ -22,6 +23,6 @@ export class ClassList implements ITaskList {
     }
     
     getTaskByIndex = (index: number)=>{
-        return this.list[index] || null
+        return this.list[index] || null;
     }
 }

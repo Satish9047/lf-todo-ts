@@ -44,7 +44,7 @@ body{
     height: 35px;
 }
 
-.search-text{
+.search-task{
     border-radius: 5px;
     padding: 5px;
     font-size: 1rem;
@@ -71,4 +71,13 @@ body{
     margin: 10px auto;
     background-color: #444444;
     color: white;
+}
+
+/*task section*/
+.task-section{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px auto;
+    width: 75vw;
 }
