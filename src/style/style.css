@@ -10,6 +10,10 @@ h1, p {
 input{
     border: none;
 }
+ul{
+    list-style-type: none;
+    width: 100%;
+}
 
 body{
     font-family: Arial, sans-serif;
@@ -44,7 +48,7 @@ body{
     height: 35px;
 }
 
-.search-task{
+.search-text{
     border-radius: 5px;
     padding: 5px;
     font-size: 1rem;
@@ -80,4 +84,27 @@ body{
     align-items: center;
     margin: 20px auto;
     width: 75vw;
+
+}
+
+.task-item{
+    display: flex;
+    margin: 10px 0;
+    padding: 10px;
+    background-color: #44444490;
+    width: 100%;
+    border-radius: 5px;
+    color: #FFFFFF;
+    gap: 20px;
+}
+
+.task-list{
+    width: 75vw;
+    height: 75vh;
+    overflow: scroll;
+}
+
+.item-content{
+    display: flex;
+    gap: 10px;
 }

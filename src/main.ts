@@ -47,9 +47,12 @@ function renderTaskList(tasks: TaskList){
     taskListElement.innerHTML = "";
     completedTaskListElement.innerHTML = "";
     tasks.list.forEach((task)=>{
+
         //creating the li html element
         const element = document.createElement("li");
+        element.classList.add("task-item")
         const completedElement = document.createElement("li");
+        completedElement.classList.add("task-item")
 
         //creating the checkbox input
         const checkBox = document.createElement("input");
@@ -66,6 +69,7 @@ function renderTaskList(tasks: TaskList){
 
         // Creating a label for the checkbox
         const label = document.createElement("label");
+        label.classList.add("item-content");
         label.appendChild(checkBox);
         label.appendChild(document.createTextNode(task.taskName));
 
