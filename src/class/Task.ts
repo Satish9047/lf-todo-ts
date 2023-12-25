@@ -1,6 +1,6 @@
 import {getRandomID} from "../utils/utils.ts";
 
-interface ITask {
+export interface ITask {
     id: string;
     taskName: string;
     isCompleted: Boolean;
@@ -33,7 +33,7 @@ export class Task implements ITask {
         return this.taskName;
     }
     
-    setCompleted = (isCompleted: boolean)=>{
+    setCompleted = (isCompleted: boolean = true)=>{
         this.isCompleted = isCompleted;
     }
     
