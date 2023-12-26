@@ -1,4 +1,4 @@
-//import 'normalize.css';
+import 'normalize.css';
 
 //importing classes
 import {Task} from "./class/Task.ts";

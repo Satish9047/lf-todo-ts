@@ -86,6 +86,10 @@ body{
     width: 75vw;
 }
 
+/*.task-section::-webkit-scrollbar {*/
+/*    display: none;*/
+/*}*/
+
 .task-item{
     position: relative;
     display: flex;
@@ -103,6 +107,10 @@ body{
     height: 75vh;
     overflow: scroll;
 
+}
+
+.task-list::-webkit-scrollbar {
+    display: none;
 }
 
 .item-content{
